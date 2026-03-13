@@ -69,3 +69,29 @@ Hypervisor
   Each VM = full OS
 
 ###### Containers:- ##################3
+
+- Isolating the applications by packaging all the dependencies and libraries into a single container on the host operating system, without running a separate os.
+
+Hardware
+│
+Host OS
+│
+Container Engine
+│
+├── Container 1 → App1
+├── Container 2 → App2
+└── Container 3 → App3
+
+- shared os kernel, lightweight, starts in seconds, small
+- application + dependencies + isolation
+
+companies who uses containers:- Netflix, google, spotify, amazon
+
+- containers allow companies to run thousands of microservices efficently.
+
+* Advantages of containers:-
+  1. Portability:- applications run the same everywhere.
+     i.e. developer laptop, test server, production cloud
+  2. Fast Startup:- containers start in miliseconds. while VMs starts in minutes.
+  3. Efficient Resource Usage:- Containers share the host OS kernel.
+     So memory and storage usage is much lower.
