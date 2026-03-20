@@ -14,3 +14,15 @@
     docker volume rm myvolume (removes the volume)
 
 # network commands
+
+    docker network ls (lists available docker networks)
+    docker network inspect
+    docker network rm <network_name>
+    docker
+
+# cleanup commands
+
+    docker stop $(docker ps -aq) (stops all containers)
+    docker rm $(docker ps -aq) (removes all containers)
+    docker rmi $(docker images -q) (deletes all images)
+    docker system prune -a (cleans unused containers, networks, images)
