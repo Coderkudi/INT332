@@ -26,3 +26,16 @@
     docker rm $(docker ps -aq) (removes all containers)
     docker rmi $(docker images -q) (deletes all images)
     docker system prune -a (cleans unused containers, networks, images)
+
+# run commands
+
+    docker run httpd echo "Hello"
+    docker run --name my-container httpd echo "Hello, World"
+
+# setting env variables
+
+    docker run -e MY_VAR=value httpd env  (it will open the container and you can check the env variable inside it as:- Echo $MY_NAME)
+
+# setting multiple env variables
+
+    docker run -e APP_ENV= production -e APP_Version=1.0 nginx
